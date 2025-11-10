@@ -132,17 +132,6 @@ h6 {
 	    font-family: 'Lato', sans-serif;
 	font-size: 18px;
 }
-/* Prevent first and last name from breaking into two lines */
-.mh-header-info h2 {
-    white-space: nowrap;
-}
-
-/* Allow wrapping on very small screens */
-@media screen and (max-width: 480px) {
-    .mh-header-info h2 {
-        white-space: normal;
-    }
-}
 
 p {
 	margin-bottom: 20px;
