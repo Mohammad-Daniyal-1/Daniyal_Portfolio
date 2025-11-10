@@ -2521,3 +2521,19 @@ body.mobile .animated {
 	margin-bottom: 10px;
 	color: #000;
  }
+/* Fix for home hero name */
+#mh-home h2 {
+    font-family: 'Lato', sans-serif !important;
+    font-size: 62px !important;
+    font-weight: 300 !important;
+    line-height: 1.2em !important;
+    margin-bottom: 0px !important;
+    white-space: nowrap !important; /* Prevent breaking into two lines */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    #mh-home h2 {
+        font-size: 40px !important;
+    }
+}
