@@ -2548,3 +2548,12 @@ body.mobile .animated {
         font-size: 20px !important;
     }
 }
+#mh-home .mh-header-info {
+    display: inline-block;       /* Allow child to stay in one line */
+    max-width: 100%;             /* Prevent wrapping due to container limits */
+}
+
+#mh-home h2 {
+    display: inline-block;       /* Force h2 to behave as inline element */
+    white-space: nowrap !important; /* Already added, but keep for safety */
+}
