@@ -34,7 +34,7 @@
       /* Loader Code End */
   
    
-    /*
+        /*
     |====================
     | Mobile NAv trigger
     |=====================
@@ -46,32 +46,32 @@
       active      = false;
   
 
-      // Prevent Bootstrap's default collapse behavior
-$('.navbar-toggler').on('click', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    $('.navbar-toggler').toggleClass('active');
-    overlay.toggleClass('active');
-    navc.toggleClass('active');
+    // Prevent Bootstrap's default collapse behavior
+    $('.navbar-toggler').on('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $('.navbar-toggler').toggleClass('active');
+        overlay.toggleClass('active');
+        navc.toggleClass('active');
+        
+        // Prevent any animations on navbar items
+        var navItems = $('.navbar-collapse .navbar-nav .nav-item, .navbar-collapse .nav li');
+        if (navc.hasClass('active')) {
+            navItems.css({
+                'animation': 'none !important',
+                '-webkit-animation': 'none !important',
+                'transform': 'translate3d(0, 0, 0) !important',
+                '-webkit-transform': 'translate3d(0, 0, 0) !important'
+            });
+        }
+    });
     
-    // Prevent any animations on navbar items
-    var navItems = $('.navbar-collapse .navbar-nav .nav-item, .navbar-collapse .nav li');
-    if (navc.hasClass('active')) {
-        navItems.css({
-            'animation': 'none !important',
-            '-webkit-animation': 'none !important',
-            'transform': 'translate3d(0, 0, 0) !important',
-            '-webkit-transform': 'translate3d(0, 0, 0) !important'
-        });
-    }
-});
-
-// Close menu when clicking nav links
-$('.navbar-nav li a, .overlay').on('click', function () {
-    $('.navbar-toggler').removeClass('active');
-    overlay.removeClass('active');
-    navc.removeClass('active');
-});
+    // Close menu when clicking nav links
+    $('.navbar-nav li a, .overlay').on('click', function () {
+        $('.navbar-toggler').removeClass('active');
+        overlay.removeClass('active');
+        navc.removeClass('active');
+    });
       
         
     /*
